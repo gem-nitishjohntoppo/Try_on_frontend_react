@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.jewelry-image {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}

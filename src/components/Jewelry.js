@@ -82,7 +82,7 @@
 // export default Jewelry;
 
 import React, { useState } from 'react';
-import br1 from '../assets/Bracelets/1.png';
+import br1 from '../src/assets/assets/Bracelets/1.png';
 import br2 from '../assets/Bracelets/2.png';
 import br3 from '../assets/Bracelets/3.png';
 import nk1 from '../assets/Necklace/1.png';
