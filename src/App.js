@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React, { useState } from 'react';
+import Jewelry from './components/Jewelry.js'
+import WebcamComponent from './components/WebcamComponent.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const App = () => {
+  const [selectedJewelry, setSelectedJewelry] = useState({
+    necklace: null,
+    ring: null,
+    earring: null,
+    bracelet: null,
+  });
+
+  const handleSelectJewelry = (jewelry) => {
+    setSelectedJewelry((prev) => ({
+      ...prev,
+      [jewelry.type]: jewelry.id,
+    }));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header className="my-4">
+        <h1>Virtual Jewelry Try-On</h1>
       </header>
+      <Jewelry onSelectJewelry={handleSelectJewelry} />
+      <WebcamComponent selectedJewelry={selectedJewelry} />
     </div>
   );
-}
+};
 
 export default App;
