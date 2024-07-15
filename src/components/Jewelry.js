@@ -119,7 +119,7 @@ const Jewelry = ({ onSelectJewelry }) => {
       reader.onloadend = async () => {
         const base64data = reader.result;
         try {
-          const response = await axios.post(`http://13.126.15.191:8005/upload_${type.toLowerCase()}`, { image: base64data }, {
+          const response = await axios.post(`/api/upload_${type.toLowerCase()}`, { image: base64data }, {
             headers: {
               'Content-Type': 'application/json',
             },
