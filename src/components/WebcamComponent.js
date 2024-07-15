@@ -14,7 +14,7 @@ const WebcamComponent = ({ selectedJewelry }) => {
       const imageSrc = webcamRef.current.getScreenshot();
       if (imageSrc) {
         try {
-          const response = await axios.post('http://13.126.15.191:8005/process_frame', {
+          const response = await axios.post('/.netlify/functions/proxy/process_frame', {
             frame: imageSrc,
             jewelry_types: selectedJewelry,
           });
