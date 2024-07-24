@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/api/*"
-  to = "https://nitishjt-virtual-try-on-backend-api.hf.space/:splat"
+  to = "http://13.232.253.41:8503/:splat"
   status = 200
   force = true
